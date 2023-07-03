@@ -1,21 +1,12 @@
 'use client';
 
 import { usePathname, useSearchParams } from 'next/navigation';
-import { TbBeach, TbMountain, TbPool } from 'react-icons/tb';
-import { 
-  GiBarn, 
-  GiBoatFishing, 
-  GiCactus, 
-  GiCastle, 
-  GiCaveEntrance, 
-  GiForestCamp, 
-  GiIsland,
-  GiWindmill
-} from 'react-icons/gi';
-import { FaSkiing } from 'react-icons/fa';
-import { BsSnow } from 'react-icons/bs';
-import { IoDiamond } from 'react-icons/io5';
-import { MdOutlineVilla } from 'react-icons/md';
+import { GiBackpack, GiGreenhouse, GiCookingPot, GiPartyPopper, GiHiking, GiWorld } from 'react-icons/gi';
+
+import { FiWifi } from 'react-icons/fi';
+import { IoMdHeart, IoMdFitness } from 'react-icons/io';
+import { FaPalette } from 'react-icons/fa';
+
 
 import CategoryBox from "../CategoryBox";
 import Container from '../Container';
@@ -23,81 +14,56 @@ import Container from '../Container';
 
 export const categories = [
   {
-    label: 'Beach',
-    icon: TbBeach,
-    description: 'This property is close to the beach!',
+    label: "Backpacker's Paradise",
+    icon: GiBackpack,
+    description: "This hostel is perfect for backpackers looking for a vibrant and social atmosphere!",
   },
   {
-    label: 'Windmills',
-    icon: GiWindmill,
-    description: 'This property is has windmills!',
+    label: 'Digital Nomad Haven',
+    icon: FiWifi,
+    description: 'This hostel offers excellent Wi-Fi and coworking spaces, catering to digital nomads and remote workers.',
   },
   {
-    label: 'Modern',
-    icon: MdOutlineVilla,
-    description: 'This property is modern!'
+    label: 'Couples Retreat',
+    icon: IoMdHeart,
+    description: 'This hostel provides a romantic setting for couples, with cozy rooms and intimate common areas.',
   },
   {
-    label: 'Countryside',
-    icon: TbMountain,
-    description: 'This property is in the countryside!'
+    label: 'Eco-Friendly',
+    icon: GiGreenhouse,
+    description: 'This environmentally conscious hostel promotes sustainable practices and eco-friendly accommodations.',
   },
   {
-    label: 'Pools',
-    icon: TbPool,
-    description: 'This is property has a beautiful pool!'
+    label: 'Artsy Vibes',
+    icon: FaPalette,
+    description: 'This hostel celebrates creativity, with art displays, workshops, and a bohemian atmosphere.',
   },
   {
-    label: 'Islands',
-    icon: GiIsland,
-    description: 'This property is on an island!'
+    label: 'Foodie Haven',
+    icon: GiCookingPot,
+    description: 'This hostel is a paradise for food lovers, offering cooking classes, local food tours, and delicious meals.',
   },
   {
-    label: 'Lake',
-    icon: GiBoatFishing,
-    description: 'This property is near a lake!'
+    label: 'Party Central',
+    icon: GiPartyPopper,
+    description: 'This hostel is renowned for its lively nightlife, social events, and party atmosphere.',
   },
   {
-    label: 'Skiing',
-    icon: FaSkiing,
-    description: 'This property has skiing activies!'
+    label: 'Wellness Retreat',
+    icon: IoMdFitness,
+    description: 'This hostel focuses on health and wellness, providing yoga classes, meditation spaces, and wellness activities.',
   },
   {
-    label: 'Castles',
-    icon: GiCastle,
-    description: 'This property is an ancient castle!'
+    label: 'Adventure Hub',
+    icon: GiHiking,
+    description: 'This hostel is a basecamp for outdoor enthusiasts, offering guided hikes, adventure tours, and equipment rentals.',
   },
   {
-    label: 'Caves',
-    icon: GiCaveEntrance,
-    description: 'This property is in a spooky cave!'
+    label: 'Cultural Immersion',
+    icon: GiWorld,
+    description: 'This hostel immerses guests in the local culture, with language lessons, cultural activities, and connections to the community.',
   },
-  {
-    label: 'Camping',
-    icon: GiForestCamp,
-    description: 'This property offers camping activities!'
-  },
-  {
-    label: 'Arctic',
-    icon: BsSnow,
-    description: 'This property is in arctic environment!'
-  },
-  {
-    label: 'Desert',
-    icon: GiCactus,
-    description: 'This property is in the desert!'
-  },
-  {
-    label: 'Barns',
-    icon: GiBarn,
-    description: 'This property is in a barn!'
-  },
-  {
-    label: 'Lux',
-    icon: IoDiamond,
-    description: 'This property is brand new and luxurious!'
-  }
-]
+];
 
 const Categories = () => {
   const params = useSearchParams();
